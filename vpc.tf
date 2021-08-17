@@ -1,5 +1,5 @@
 provider "aws" {
-  region = "us-east-1"
+  region = "eu-west-2"
 }
 
 variable "vpc_cidr_block" {}
@@ -8,11 +8,11 @@ variable "public_subnet_cidr_blocks" {}
 
 data "aws_availability_zones" "azs" {}
 
-module "quarklink-vpc" {
+module "TEST-vpc" {
   source  = "terraform-aws-modules/vpc/aws"
   version = "2.64.0"
 
-  name            = "quarklink-vpc"
+  name            = "TEST-vpc"
   cidr            = var.vpc_cidr_block
   private_subnets = var.private_subnet_cidr_blocks
   public_subnets  = var.public_subnet_cidr_blocks

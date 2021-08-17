@@ -19,8 +19,8 @@ module "eks" {
   cluster_name    = "myapp-eks-cluster"
   cluster_version = "1.17"
 
-  subnets = module.quarklink-vpc.private_subnets
-  vpc_id  = module.quarklink-vpc.vpc_id
+  subnets = module.TEST-vpc.private_subnets
+  vpc_id  = module.TEST-vpc.vpc_id
 
   tags = {
     environment = "dev"

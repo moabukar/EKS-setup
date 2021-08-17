@@ -1,0 +1,4 @@
+kubeconfig_myapp-eks-cluster
+
+terraform.tfstate
+
